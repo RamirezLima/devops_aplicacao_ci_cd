@@ -28,9 +28,9 @@ jobs:
       run: streamlit --version
 
     - name: Run app script syntax check
-      run: python ferramentas_professores.py --help || true
+      run: python main.py --help || true
 
     - name: Run basic smoke test
       run: |
         # Testa se o script roda sem erro (não abre interface)
-        python -c "import ferramentas_professores"
+        python -c "import main"

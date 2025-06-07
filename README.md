@@ -1,1 +1,0 @@
-# devops_aplicacao_ci_cd

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: meu-web-service
+    env: node
+    plan: free
+    repo: https://github.com/RamirezLima/devops_aplicacao_ci_cd
+    branch: AppJavaScript
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: meu-postgres
+          property: connectionString
+
+databases:
+  - name: meu-postgres
+    plan: free
+    region: oregon
